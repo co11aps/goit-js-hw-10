@@ -23,11 +23,15 @@ const options = {
   onClose(selectedDates) {
     if (selectedDates[0] <= Date.now()) {
       startBtn.disabled = true;
-      // window.alert('Please choose a date in the future');
+
       iziToast.show({
         message: 'Please choose a date in the future',
+        messageColor: '#fff',
         color: 'red',
+        backgroundColor: '#EF4040',
+        messageSize: '16',
         position: 'topCenter',
+        iconUrl: '../img/stop-icon.svg',
       });
     } else {
       startBtn.disabled = false;
