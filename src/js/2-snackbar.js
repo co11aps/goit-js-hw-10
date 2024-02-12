@@ -2,6 +2,8 @@ console.log('Snackbar');
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import stopIcon from '../img/stop-icon.svg';
+import okIcon from '../img/ok-icon.svg';
 
 const form = document.querySelector('.form');
 
@@ -27,13 +29,24 @@ function onSubmit(evt) {
         position: 'topRight',
         color: 'green',
         message: `✅ Fulfilled promise in ${delay}ms`,
+        messageColor: '#fff',
+        color: 'green',
+        backgroundColor: '#59A10D',
+        messageSize: '16',
+        position: 'topCenter',
+        iconUrl: okIcon,
       });
     })
     .catch(error => {
       iziToast.show({
-        position: 'topRight',
         color: 'red',
         message: `❌ Rejected promise in ${delay}ms`,
+        messageColor: '#fff',
+        color: 'red',
+        backgroundColor: '#EF4040',
+        messageSize: '16',
+        position: 'topCenter',
+        iconUrl: stopIcon,
       });
     });
 
