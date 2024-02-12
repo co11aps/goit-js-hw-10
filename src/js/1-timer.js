@@ -4,6 +4,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import img from '../img/stop-icon.svg';
 
 const startBtn = document.querySelector('button[data-start]');
 const dateTimePicker = document.querySelector('input#datetime-picker');
@@ -31,7 +32,7 @@ const options = {
         backgroundColor: '#EF4040',
         messageSize: '16',
         position: 'topCenter',
-        iconUrl: './img/stop-icon.svg',
+        iconUrl: img,
       });
     } else {
       startBtn.disabled = false;
