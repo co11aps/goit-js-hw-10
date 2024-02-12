@@ -31,7 +31,7 @@ const options = {
         backgroundColor: '#EF4040',
         messageSize: '16',
         position: 'topCenter',
-        iconUrl: '../img/stop-icon.svg',
+        iconUrl: './img/stop-icon.svg',
       });
     } else {
       startBtn.disabled = false;
